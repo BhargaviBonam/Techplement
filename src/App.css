@@ -1,0 +1,158 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(45, 43, 43);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(230deg, rgb(182, 88, 214) 10%, rgb(74, 171, 224) 80%);
+}
+
+/* Header */
+.header { 
+  margin: 2rem;
+}
+.header h1 {
+  text-align: center;
+  font-family: "Caveat", sans-serif;
+  font-weight: 700;
+  color: #d2ef6b;
+  font-size: clamp(2rem, -0.8rem + 5vw, 3rem);
+  margin-bottom: 0;
+}
+.header p {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  color: #d9dccf;
+  font-size: clamp(0.8rem, -0.8rem + 5vw, 1rem);
+}
+.header a {
+  text-decoration: none;
+  display: inline-block;
+  color: #d9dccf;
+}
+
+/* Quotes */
+
+#quote-box {
+  width: 18rem;
+  height: 22rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #E5E5E5;
+}
+
+.text {
+  height: 80%;
+}
+
+.quote {
+  font-size: clamp(.6rem , -0.875rem + 8.333vw, 1rem);
+}
+
+.author {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  font-size: clamp(.6rem , -0.875rem + 8.333vw, 1rem);
+}
+
+.btn {
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(230deg, rgb(182, 88, 214) 10%, rgb(74, 171, 224) 80%);
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+.btn:active {
+  transform: scale(0.9);
+}
+.btn span {
+  z-index: 1;
+  position: relative;
+}
+.btn:hover {
+  color: #121212; 
+}
+.btn::before {
+  content: "";
+  background: #fff;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover::before {
+  width: 100%;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.quotation-mark {
+  font-size: 2em;
+  margin-right: 0.2em;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .main {
+    width: 100vw;
+    min-height: 100vh;
+  }
+  #quote-box {
+    width: 600px;
+    height: 300px;
+    padding: 3rem;
+  }
+  .text {
+    text-align: center;
+  }
+  .author {
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+  .tweet {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Footer */
+.footer {
+  margin-bottom: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.footer span {
+  font-style: italic;
+  font-size: 0.7rem;
+  color: rgb(247, 237, 237);
+}
+.footer a {
+  text-decoration: none;
+  color: rgb(247, 237, 237);
+}
